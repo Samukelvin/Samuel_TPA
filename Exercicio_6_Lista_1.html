@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Otavio e Samuel">
+    <title>Exercicio 6</title>
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <h1>Digite 3 Numeros para somar-los</h1>
+    <input type="number" id="numero1">
+    <input type="number" id="numero2">
+    <input type="number" id="numero3">
+    <button id="somar">Somar</button>
+    <p id="resultado"></p>
+    <h2>Caso a soma seja maior que 100, exibira o maior numero, caso contrario exibira o menor.</h2>
+    <p id="maioroumenor"></p>
+    <script>
+        const botao = document.getElementById("somar")
+        botao.addEventListener("click", function () {
+            const numero1 = Number(document.getElementById("numero1").value)
+            const numero2 = Number(document.getElementById("numero2").value)
+            const numero3 = Number(document.getElementById("numero3").value)
+            const maioroumenor = document.getElementById("maioroumenor")
+            const numeros = [numero1, numero2, numero3]
+            let soma = 0
+            for (let repeticao = 0; repeticao < numeros.length; repeticao++) {
+                soma += numeros.at(repeticao)
+            }
+            console.log(soma)
+            let resultado = document.getElementById("resultado")
+            resultado.innerHTML = `${numero1} + ${numero2} + ${numero3} = ${soma}`
+            if (soma > 100) {
+                if (numero1 > numero2 && numero1 > numero3) {
+                    let maiornum = numero1
+                    console.log(maiornum)
+                    maioroumenor.innerHTML = maiornum
+                } else if (numero2 > numero3 && numero2 > numero1) {
+                    let maiornum = numero2
+                    console.log(maiornum)
+                    maioroumenor.innerHTML = maiornum
+                } else if (numero3 > numero2 && numero3 > numero1) {
+                    let maiornum = numero3
+                    console.log(maiornum)
+                    maioroumenor.innerHTML = maiornum
+                }
+            } else {
+                if (numero1 < numero2 && numero1 < numero3) {
+                    let menornum = numero1
+                    console.log(menornum)
+                    maioroumenor.innerHTML = menornum
+                } else if (numero2 < numero3 && numero2 < numero1) {
+                    let menornum = numero2
+                    console.log(menornum)
+                    maioroumenor.innerHTML = menornum
+                } else if (numero3 < numero2 && numero3 < numero1) {
+                    let menornum = numero3
+                    console.log(menornum)
+                    maioroumenor.innerHTML = menornum
+                }
+            }
+
+        })
+    </script>
+</body>
+
+</html>

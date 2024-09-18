@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Otavio e Samuel">
+    <title>Exercicio 5</title>
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <h1>Digite 3 coisas para 3 arrays para concatenar</h1>
+    <input type="text" id="coisa1">
+    <input type="text" id="coisa2">
+    <input type="text" id="coisa3">
+    <button id="somar">Exibir</button>
+    <p id="resultado"></p>
+    <script>
+        const botao = document.getElementById("somar")
+        botao.addEventListener("click", ()=>{
+            const coisa1 = document.getElementById("coisa1").value
+            const coisa2 = document.getElementById("coisa2").value
+            const coisa3 = document.getElementById("coisa3").value
+
+            const array1 = [coisa1]
+            const array2 = [coisa2]
+            const array3 = [coisa3]
+
+            let concatenado = array1.concat(coisa2, coisa3)
+
+            console.log(concatenado)
+
+            const resultado = document.getElementById("resultado");
+
+            resultado.innerHTML = concatenado
+        })
+    </script>
+</body>
+
+</html>

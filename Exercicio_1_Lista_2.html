@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 1 - Array bidimensional</title>
+    <meta name="author" content="Otavio e Samuel">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Nerko+One&display=swap');
+
+        body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            text-align: center;
+            background-image: linear-gradient(0deg, #8f8f8f, #7a66ff);
+            background-repeat: no-repeat;
+            background-size: 100% 120vh;
+            color: #fff;
+            font-family: "Nerko One", cursive;
+            font-size: 35px;
+        }
+
+        input {
+            font-size: 25px;
+            font-family: "Nerko One", cursive;
+            width: 320px;
+            height: 30px;
+            border: 1px transparent solid;
+            border-radius: 10px;
+            color: crimson;
+            text-align: right;
+        }
+
+        button {
+            font-size: 25px;
+            font-family: "Nerko One", cursive;
+            width: 300px;
+            height: 40px;
+            border: 1px transparent solid;
+            border-radius: 15px;
+            color: crimson;
+            text-align: center;
+            cursor: pointer;
+            transition: 0.5s;
+        }
+
+        button:hover {
+            background-color: crimson;
+            color: #000;
+            transition: 0.5s;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>
+        Exercicio 1
+    </h1>
+    <h3>
+        1. Crie um array bidimensional de 3 índices com 3 itens cada. Receba os valores de cada índice via prompt e no
+        final exiba a tabela de valores digitada e a soma de todos os números.
+        Utilizar forEach para percorrer a matriz e reduce para acumular os valores.
+    </h3>
+    <p>
+        <label>Array 1</label>
+        <input type="number" id="a1">
+        <input type="number" id="a2">
+        <input type="number" id="a3">
+    </p>
+    <p>
+        <label>Array 2</label>
+        <input type="number" id="b1">
+        <input type="number" id="b2">
+        <input type="number" id="b3">
+    </p>
+    <p>
+        <label>Array 3</label>
+        <input type="number" id="c1">
+        <input type="number" id="c2">
+        <input type="number" id="c3">
+    </p>
+    <p>
+        <button id="funcionar">Exibir e Calcular</button>
+    </p>
+    <p id="resultado">
+
+    </p>
+    <script>
+        document.getElementById("funcionar").addEventListener("click", () => {
+            const a1 = Number(document.getElementById("a1"))
+            const a2 = Number(document.getElementById("a2"))
+            const a3 = Number(document.getElementById("a3"))
+            const b1 = Number(document.getElementById("b1"))
+            const b2 = Number(document.getElementById("b2"))
+            const b3 = Number(document.getElementById("b3"))
+            const c1 = Number(document.getElementById("c1"))
+            const c2 = Number(document.getElementById("c2"))
+            const c3 = Number(document.getElementById("c3"))
+
+
+
+        })
+    </script>
+</body>
+
+</html>

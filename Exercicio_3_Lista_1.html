@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Otavio e Samuel">
+    <title>Exercicio 3</title>
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <h1>Digite 5 Numeros para deixa-los em ordem</h1>
+    <input type="number" id="numero1">
+    <input type="number" id="numero2">
+    <input type="number" id="numero3">
+    <input type="number" id="numero4">
+    <input type="number" id="numero5">
+    <button id="somar">Somar</button>
+    <p id="resultado"></p>
+    <script>
+        const botao = document.getElementById("somar")
+        botao.addEventListener("click", function () {
+            const numero1 = Number(document.getElementById("numero1").value)
+            const numero2 = Number(document.getElementById("numero2").value)
+            const numero3 = Number(document.getElementById("numero3").value)
+            const numero4 = Number(document.getElementById("numero4").value)
+            const numero5 = Number(document.getElementById("numero5").value)
+            const numeros = [numero1, numero2, numero3, numero4, numero5]
+            numeros.sort((a, b) => b - a)
+            for (let repeticao = 0; repeticao < numeros.length; repeticao++) {
+                resultado.innerHTML += `${numeros.at(repeticao)}; `
+            }
+        })
+    </script>
+</body>
+
+</html>

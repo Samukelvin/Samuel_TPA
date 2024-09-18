@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Otavio e Samuel">
+    <title>Exercicio 4</title>
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <h1>Digite 5 palavras para exibir a quantidade de caracteres do maior elemento</h1>
+    <input type="text" id="word1">
+    <input type="text" id="word2">
+    <input type="text" id="word3">
+    <input type="text" id="word4">
+    <input type="text" id="word5">
+    <button id="somar">Exibir</button>
+    <p id="resultado"></p>
+    <script>
+        const botao = document.getElementById("somar")
+        botao.addEventListener("click", function () {
+            const palavra1 = document.getElementById("word1").value
+            const palavra2 = document.getElementById("word2").value
+            const palavra3 = document.getElementById("word3").value
+            const palavra4 = document.getElementById("word4").value
+            const palavra5 = document.getElementById("word5").value
+            const palavras = [palavra1, palavra2, palavra3, palavra4, palavra5]
+            let resultado = document.getElementById("resultado")
+            
+            let maiorPalavra = palavras.at(0)
+            for(let i = 1; i < palavras.length; i++){
+                if (palavras.at(i).length > maiorPalavra.length) {
+                    maiorPalavra = palavras.at(i)
+                }
+            }
+            resultado.innerHTML = `A palavra '${maiorPalavra}' tem ${maiorPalavra.length} caracteres.`
+        })
+    </script>
+</body>
+
+</html>
